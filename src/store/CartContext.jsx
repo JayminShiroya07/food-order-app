@@ -72,13 +72,14 @@ export function CartContextProvider({ children }) {
     }
 
     function clearCart(){
-        dispatchCartAction({type: 'CLEAR_CART'})
+        dispatchCartAction({ type: 'CLEAR_CART'})
     }
 
     const cartContext = {
         items: cart.items,
         addItem,
-        removeItem
+        removeItem,
+        clearCart
     };
 
     return <CartContext.Provider value={cartContext}>
